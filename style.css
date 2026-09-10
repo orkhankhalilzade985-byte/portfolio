@@ -77,8 +77,30 @@ nav a.active {
     padding: 120px 13% 80px;
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
 .hero-content {
     max-width: 850px;
+}
+
+.hero-image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-ml-img {
+    width: 100%;
+    max-width: 720px; /* Şəkil bir qədər də böyüdüldü */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .small-text {
@@ -413,11 +435,18 @@ nav a.active {
 ========================= */
 
 .contact {
+    position: relative;
     min-height: 70vh;
+    /* Qradiyent tündlüyü azaldıldı (0.75), beləcə python_photo daha parlaq görünəcək */
+    background-image: linear-gradient(rgba(5, 5, 5, 0.75), rgba(5, 5, 5, 0.75)), url('assets/python_photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .contact > p {
-    color: #999;
+    color: #ddd; /* Yazıların da oxunması üçün rəngi biraz açıldı */
 
     font-size: 20px;
 
@@ -482,6 +511,15 @@ footer {
         padding-right: 6%;
     }
 
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image-box {
+        margin-top: 30px;
+    }
+
     .about-container {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -528,4 +566,3 @@ footer {
     }
 
 }
-
